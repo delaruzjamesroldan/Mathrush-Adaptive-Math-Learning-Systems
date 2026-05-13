@@ -183,11 +183,43 @@ line-height:2;
 text-align:left;
 }
 
+/* CHECKBOX FIX */
+
 .checkbox{
+
 display:flex;
-gap:10px;
+
+align-items:flex-start;
+
+gap:12px;
+
 margin-top:20px;
-align-items:center;
+
+padding:15px;
+
+background:#eff6ff;
+
+border-radius:15px;
+
+line-height:1.5;
+}
+
+.checkbox input{
+
+width:20px;
+
+height:20px;
+
+margin-top:2px;
+
+cursor:pointer;
+}
+
+.checkbox span{
+
+font-size:15px;
+
+color:#1e293b;
 }
 
 /* STATS */
