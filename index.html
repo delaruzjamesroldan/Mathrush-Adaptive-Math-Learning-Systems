@@ -4,14 +4,15 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>MathRush</title>
-<link rel="stylesheet" href="style.css">
+<title>MathRush: Adaptive Math Learning System</title>
+<link rel="stylesheet" href="style.css?v=1">
 </head>
 
 <body>
 
 <!-- NAVBAR -->
 <nav id="navbar" class="navbar">
+
 <div class="nav-left">
 <div class="logo-box">⚡</div>
 <div>
@@ -28,8 +29,10 @@
 </div>
 
 <div class="nav-right">
-<img id="navProfile" src="https://cdn-icons-png.flaticon.com/512/149/149071.png">
+<img id="navProfile"
+src="https://cdn-icons-png.flaticon.com/512/149/149071.png">
 </div>
+
 </nav>
 
 <!-- LANDING -->
@@ -117,7 +120,7 @@ src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://delar
 <div class="stat-card"><h3>Difficulty</h3><p id="difficultyDisplay">Easy</p></div>
 </div>
 
-<button onclick="showPage('operation')">Start</button>
+<button onclick="showPage('operation')">Start Assessment</button>
 
 </div>
 </section>
@@ -125,10 +128,10 @@ src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://delar
 <!-- OPERATION -->
 <section id="operation" class="page">
 <div class="card center">
-<button onclick="chooseOperation('+')">+</button>
-<button onclick="chooseOperation('-')">-</button>
-<button onclick="chooseOperation('*')">*</button>
-<button onclick="chooseOperation('/')">/</button>
+<button onclick="chooseOperation('+')">Addition</button>
+<button onclick="chooseOperation('-')">Subtraction</button>
+<button onclick="chooseOperation('*')">Multiplication</button>
+<button onclick="chooseOperation('/')">Division</button>
 </div>
 </section>
 
@@ -145,7 +148,9 @@ src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://delar
 <section id="game" class="page">
 <div class="card center">
 
-<img id="gameProfile" class="profile" src="https://cdn-icons-png.flaticon.com/512/149/149071.png">
+<img id="gameProfile"
+class="profile"
+src="https://cdn-icons-png.flaticon.com/512/149/149071.png">
 
 <h1 id="question">0 + 0</h1>
 
@@ -160,8 +165,13 @@ src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://delar
 <!-- RESULT -->
 <section id="result" class="page">
 <div class="card center">
+
+<h2>Result</h2>
 <p id="resultText"></p>
+
 <button onclick="startGame()">Next</button>
+<button onclick="showPage('dashboard')">Dashboard</button>
+
 </div>
 </section>
 
@@ -169,12 +179,15 @@ src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://delar
 <section id="profile" class="page">
 <div class="card center">
 
+<div class="profile-wrapper">
+
 <div class="avatar-container">
 
 <img id="profilePreview" class="profile hidden-profile">
 
 <div id="emptyProfile" class="empty-profile">
-<img src="https://cdn-icons-png.flaticon.com/512/149/149071.png" class="default-avatar">
+<img src="https://cdn-icons-png.flaticon.com/512/149/149071.png"
+class="default-avatar">
 </div>
 
 <label for="profileUpload" class="upload-btn">+</label>
@@ -183,7 +196,11 @@ src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://delar
 
 </div>
 
-<input type="file" id="profileUpload" onchange="changeProfile(event)" hidden>
+</div>
+
+<input type="file" id="profileUpload"
+accept="image/*"
+onchange="changeProfile(event)" hidden>
 
 <input type="text" id="editName">
 
@@ -195,6 +212,7 @@ src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://delar
 <!-- PROGRESS -->
 <section id="progress" class="page">
 <div class="dashboard">
+
 <h2>Progress</h2>
 
 <div class="stats">
