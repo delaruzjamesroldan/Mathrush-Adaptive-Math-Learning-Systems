@@ -1,0 +1,147 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial;
+}
+
+body{
+background:#2563eb;
+overflow-x:hidden;
+}
+
+/* PAGE */
+.page{
+display:none;
+min-height:100vh;
+justify-content:center;
+align-items:center;
+padding:120px 20px;
+}
+
+.page.active{display:flex;}
+
+/* NAV */
+.navbar{
+position:fixed;
+top:20px;
+left:50%;
+transform:translateX(-50%);
+width:95%;
+background:white;
+padding:20px;
+border-radius:25px;
+display:none;
+justify-content:space-between;
+align-items:center;
+z-index:999;
+}
+
+.logo-box{
+width:60px;height:60px;background:#2563eb;
+color:white;display:flex;justify-content:center;
+align-items:center;border-radius:18px;
+}
+
+.nav-center button{
+padding:10px 15px;
+border:none;
+background:#2563eb;
+color:white;
+border-radius:10px;
+cursor:pointer;
+}
+
+/* CARD */
+.card{
+background:white;
+padding:40px;
+border-radius:25px;
+max-width:500px;
+width:100%;
+}
+
+.dashboard{max-width:1000px;width:100%;}
+
+/* STATS */
+.stats{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:20px;
+}
+
+.stat-card{
+background:white;
+padding:25px;
+border-radius:20px;
+text-align:center;
+}
+
+.stat-card p{
+font-size:28px;
+color:#2563eb;
+}
+
+/* PROFILE */
+.profile{
+width:140px;
+height:140px;
+border-radius:50%;
+border:4px solid #2563eb;
+object-fit:cover;
+}
+
+.hidden-profile{display:none;}
+
+.empty-profile{
+width:140px;
+height:140px;
+background:#dbeafe;
+border-radius:50%;
+display:flex;
+justify-content:center;
+align-items:center;
+}
+
+/* BUTTONS */
+button{
+padding:12px;
+margin-top:10px;
+border:none;
+border-radius:12px;
+background:#2563eb;
+color:white;
+cursor:pointer;
+}
+
+/* QUESTION */
+#question{
+font-size:50px;
+color:#2563eb;
+}
+
+/* QR FIX */
+.qr-section{
+position:fixed;
+top:20px;
+left:20px;
+display:flex;
+flex-direction:column;
+align-items:center;
+z-index:9999;
+}
+
+.qr-code{
+width:120px;
+height:120px;
+background:white;
+padding:10px;
+border-radius:20px;
+}
+
+.qr-section p{
+color:white;
+margin-top:10px;
+font-size:14px;
+font-weight:bold;
+}
