@@ -1,0 +1,413 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial;
+}
+
+body{
+background:#2563eb;
+overflow-x:hidden;
+}
+
+/* PAGE */
+
+.page{
+display:none;
+min-height:100vh;
+padding:140px 20px 40px;
+justify-content:center;
+align-items:flex-start;
+}
+
+.page.active{
+display:flex;
+}
+
+/* NAVBAR */
+
+.navbar{
+position:fixed;
+top:15px;
+left:50%;
+transform:translateX(-50%);
+width:95%;
+background:white;
+padding:20px 30px;
+border-radius:30px;
+display:none;
+justify-content:space-between;
+align-items:center;
+z-index:999;
+box-shadow:0 10px 30px rgba(0,0,0,0.15);
+}
+
+.nav-left{
+display:flex;
+align-items:center;
+gap:15px;
+}
+
+.logo-box{
+width:60px;
+height:60px;
+background:#2563eb;
+border-radius:18px;
+display:flex;
+justify-content:center;
+align-items:center;
+font-size:30px;
+}
+
+.nav-left h1{
+font-size:32px;
+}
+
+.nav-left span{
+color:#2563eb;
+}
+
+.nav-left p{
+color:gray;
+font-size:14px;
+}
+
+.nav-center{
+display:flex;
+gap:15px;
+}
+
+.nav-center button{
+width:auto;
+padding:12px 25px;
+margin:0;
+}
+
+.nav-right img{
+width:70px;
+height:70px;
+border-radius:50%;
+border:3px solid #2563eb;
+object-fit:cover;
+}
+
+/* CARD */
+
+.card{
+background:white;
+padding:40px;
+border-radius:30px;
+width:100%;
+max-width:500px;
+box-shadow:0 10px 30px rgba(0,0,0,0.15);
+}
+
+.center{
+text-align:center;
+}
+
+/* DASHBOARD */
+
+.dashboard{
+width:100%;
+max-width:1000px;
+}
+
+.welcome-box{
+background:white;
+padding:50px;
+border-radius:30px;
+box-shadow:0 10px 30px rgba(0,0,0,0.15);
+text-align:center;
+}
+
+.welcome-box h2{
+font-size:45px;
+margin-bottom:20px;
+color:#2563eb;
+}
+
+.welcome-box p{
+font-size:18px;
+line-height:1.8;
+color:#475569;
+margin-bottom:35px;
+}
+
+.assessment-btn{
+width:280px;
+padding:18px;
+font-size:18px;
+border-radius:50px;
+background:#2563eb;
+}
+
+/* INPUT */
+
+input{
+width:100%;
+padding:15px;
+margin-top:15px;
+border-radius:15px;
+border:1px solid #d1d5db;
+font-size:15px;
+}
+
+/* BUTTONS AND COLORS */
+
+button{
+width:100%;
+padding:15px;
+margin-top:15px;
+border:none;
+border-radius:15px;
+background:#2563eb;
+color:white;
+font-size:16px;
+font-weight:bold;
+cursor:pointer;
+transition: background 0.2s ease;
+}
+
+button:hover{
+background:#1d4ed8;
+}
+
+/* Kulay ng Sign In Button kapag active (Green) */
+button.login-btn-active:not([disabled]) {
+    background-color: #10b981 !important;
+}
+button.login-btn-active:not([disabled]):hover {
+    background-color: #059669 !important;
+}
+
+/* Kulay ng Create Account Button kapag active (Orange) */
+button.signup-btn-active:not([disabled]) {
+    background-color: #f97316 !important;
+}
+button.signup-btn-active:not([disabled]):hover {
+    background-color: #ea580c !important;
+}
+
+/* Disabled button look */
+button.disabled-btn {
+    background-color: #94a3b8 !important;
+    color: #cbd5e1 !important;
+    cursor: not-allowed;
+}
+
+/* INAYOS: Mas binabaan ang space mula sa button at pinosisyon sa mismong gitna */
+.switch {
+    margin-top: 25px; /* Binabaan pa mula sa button */
+    text-align: center; /* Nilagay sa mismong gitna */
+    font-size: 14px;
+    color: #475569;
+}
+
+.bold-text {
+    font-weight: 800;
+    color: #1e293b;
+}
+
+/* INAYOS: Kapag tinutok ang mouse arrow dito, magiging KAMAY (pointer) na siya */
+.link-highlight {
+    color: #2563eb;
+    font-weight: 900;
+    cursor: pointer; /* Ginawang KAMAY ang mouse cursor */
+    margin-left: 5px;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.link-highlight:hover {
+    text-decoration: underline;
+    color: #1d4ed8;
+}
+
+/* GRID */
+
+.grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:15px;
+margin-top:20px;
+}
+
+/* PROFILE */
+
+.profile-wrapper{
+display:flex;
+justify-content:center;
+margin-bottom:20px;
+}
+
+.avatar-container{
+position:relative;
+width:160px;
+height:160px;
+}
+
+.profile{
+width:160px;
+height:160px;
+border-radius:50%;
+object-fit:cover;
+border:5px solid #2563eb;
+}
+
+.hidden-profile{
+display:none;
+}
+
+.empty-profile{
+width:160px;
+height:160px;
+border-radius:50%;
+background:#dbeafe;
+display:flex;
+justify-content:center;
+align-items:center;
+border:5px solid #2563eb;
+}
+
+.default-avatar{
+width:80px;
+}
+
+.upload-btn{
+position:absolute;
+bottom:0;
+right:0;
+width:45px;
+height:45px;
+border-radius:50%;
+background:#2563eb;
+color:white;
+display:flex;
+justify-content:center;
+align-items:center;
+font-size:20px;
+cursor:pointer;
+border:3px solid white;
+}
+
+.remove-btn{
+position:absolute;
+top:0;
+right:0;
+width:38px;
+height:38px;
+border-radius:50%;
+background:red;
+padding:0;
+}
+
+/* PROGRESS */
+
+.progress-container{
+width:100%;
+max-width:1100px;
+}
+
+.progress-title{
+font-size:45px;
+color:white;
+margin-bottom:30px;
+}
+
+.history-card{
+background:#e2e8f0;
+padding:25px;
+border-radius:20px;
+margin-bottom:20px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+flex-wrap:wrap;
+gap:20px;
+font-weight:bold;
+}
+
+/* QR */
+
+.qr-section{
+position:absolute;
+left:30px;
+top:30px;
+display:flex;
+flex-direction:column;
+align-items:center;
+}
+
+.qr-code{
+width:120px;
+background:white;
+padding:10px;
+border-radius:20px;
+}
+
+.qr-section p{
+margin-top:10px;
+color:white;
+font-weight:bold;
+}
+
+/* QUESTION */
+
+#question{
+font-size:60px;
+margin:20px 0;
+color:#2563eb;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:900px){
+.navbar{
+flex-direction:column;
+gap:20px;
+}
+.nav-center{
+flex-wrap:wrap;
+justify-content:center;
+}
+.grid{
+grid-template-columns:1fr;
+}
+.history-card{
+flex-direction:column;
+align-items:flex-start;
+}
+.progress-title{
+font-size:35px;
+}
+.welcome-box h2{
+font-size:35px;
+}
+}
+
+/* CHECKBOX LAYOUT AT DESIGN ALIGNMENT */
+.checkbox-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    text-align: left;
+    width: 100%;
+}
+
+.checkbox-container input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    margin-top: 0;
+    cursor: pointer;
+}
+
+.checkbox-container label {
+    font-size: 14px;
+    color: #475569;
+    cursor: pointer;
+    user-select: none;
+}
